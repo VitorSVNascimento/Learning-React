@@ -1,4 +1,5 @@
 import { useState } from 'react'
+import { useEffect } from 'react';
 import HelpPage from './helpPage'
 
 import './App.css'
@@ -14,9 +15,17 @@ function App() {
   if(redirectToHelp) {
     return <HelpPage />
   }
+  
+  useEffect(() => {
+    const pageTitle = document.querySelector('#page-title');
+    if (pageTitle) {
+      pageTitle.textContent = 'Main - Page';
+    }
+  }, []);
+
 
   return (
-
+    
     <div className="App">
       <h1>This is a main page</h1>
       <p>Click on the button below to go to the help page</p>
