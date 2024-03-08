@@ -27,9 +27,13 @@ function App() {
   return (
     
     <div className="App">
-      <h1 className='text-blue-200'>This is a main page</h1>
+      <div className='container-sm bg-slate-500'>
+
+        <h1 className='text-blue-200'>This is a main page</h1>
       <p>Click on the button below to go to the help page</p>
-      <button onClick={redirectToHelpPage}>Help</button>
+      <button className=' hover:bg-red-800 hover:size-full' onClick={redirectToHelpPage}>Help</button>
+
+      </div>
     </div>
   )
 }
