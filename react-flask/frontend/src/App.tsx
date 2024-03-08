@@ -27,7 +27,7 @@ function App() {
   return (
     
     <div className="App">
-      <h1>This is a main page</h1>
+      <h1 className='text-blue-200'>This is a main page</h1>
       <p>Click on the button below to go to the help page</p>
       <button onClick={redirectToHelpPage}>Help</button>
     </div>
