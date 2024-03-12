@@ -7,7 +7,9 @@ print(os.path.dirname(__file__))
 
 @app.route('/')
 def index():
-    return render_template('index.html')
+    user = {'name' : 'Vitor'}
+    return render_template('index.html',page_title="Minha pagina flask",user = {'name' :'Vitor',
+                                                                                'age' : 21})
 
 if __name__ == '__main__':
     app.run(debug=True)
